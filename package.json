@@ -1,12 +1,15 @@
 {
-  "name": "wayback-css",
-  "description": "Get the css for a wayback machine url",
+  "name": "wayback-css-cli",
+  "description": "Get the css for a wayback machine url + cli version",
   "author": "John Otander",
   "version": "1.0.3",
   "main": "index.js",
   "files": [
     "index.js"
   ],
+  "bin": {
+    "waybackcss": "./bin/waybackcss"
+  },
   "scripts": {
     "test": "ava -v"
   },
@@ -15,12 +18,14 @@
   "license": "MIT",
   "dependencies": {
     "cheerio": "^0.22.0",
+    "commander": "^2.11.0",
     "get-inline-styles": "^1.0.0",
     "got": "^6.6.3",
     "is-blank": "^1.1.0",
     "strip-html-comments": "^1.0.0",
     "strip-wayback-toolbar": "^1.0.0",
-    "ua-string": "^1.0.0"
+    "ua-string": "^1.0.0",
+    "wayback-css": "^1.0.3"
   },
   "devDependencies": {
     "ava": "*"

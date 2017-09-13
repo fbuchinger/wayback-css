@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var program = require('commander');
+var waybackCss = require('..');
+
+program
+  .version('0.0.1')
+  .command('* <url> <timestamp>')
+  .action(function(url, timestamp) {
+    if(url && timestamp) {
+      waybackCss(url, timestamp).then(function(css) {
+        console.log(css.styles);
+      });
+    }
+  });
+
+program.parse(process.argv);
